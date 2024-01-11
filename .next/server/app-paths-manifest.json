@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/propals/page": "app/propals/page.js",
+  "/propals/[id]/page": "app/propals/[id]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
