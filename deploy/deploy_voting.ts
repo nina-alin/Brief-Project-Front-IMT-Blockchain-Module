@@ -1,17 +1,16 @@
-// deploy/1_deploy_Voting.ts
-const { ethers } = require("hardhat");
+import { ethers } from "hardhat";
 
 async function main() {
-  const voting = await ethers.deployContract("Voting");
+  const token = await ethers.deployContract("Voting");
 
-  await voting.waitForDeployment();
+  await token.waitForDeployment();
 
-  console.log(`Contract deployed to ${voting.target}`);
+  console.log(`Contract deployed to ${token.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {
   console.error(error);
-  process.exit(1);
+  process.exitCode = 1;
 });
